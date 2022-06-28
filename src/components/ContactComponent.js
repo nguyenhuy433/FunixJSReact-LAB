@@ -1,6 +1,15 @@
 import React from "react";
 
-import { Breadcrumb, BreadcrumbItem } from "reactstrap";
+import {
+  Breadcrumb,
+  BreadcrumbItem,
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+  Col,
+} from "reactstrap";
 import { Link } from "react-router-dom";
 
 function Contact(props) {
