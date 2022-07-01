@@ -8,11 +8,14 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
 /* const root = ReactDOM.createRoot(document.getElementById("root"));
+//react-scripts 5.0.1
 root.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>
 ); */
+
+//react-scripts 1.1.4
 ReactDOM.render(<App />, document.getElementById("root"));
 
 // If you want to start measuring performance in your app, pass a function
