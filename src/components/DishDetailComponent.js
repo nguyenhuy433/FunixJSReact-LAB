@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import {
   Card,
   CardImg,
-  CardImgOverlay,
   CardText,
   CardBody,
   CardTitle,
@@ -39,7 +38,7 @@ function RenderDish({ dish }) {
   );
 }
 
-function RenderComments({ comments, dishId, addComment }) {
+function RenderComments({ comments, dishId, postComment }) {
   if (comments != null)
     return (
       <div className="col-xs-12  m-1">
@@ -61,7 +60,7 @@ function RenderComments({ comments, dishId, addComment }) {
             );
           })}
         </ul>
-        <CommentForm dishId={dishId} addComment={addComment} />
+        <CommentForm dishId={dishId} postComment={postComment} />
       </div>
     );
   else return <div></div>;
@@ -89,7 +88,7 @@ class CommentForm extends Component {
 
   handleSubmit(values) {
     this.toggleModal();
-    this.props.addComment(
+    this.props.postComment(
       this.props.dishId,
       values.rating,
       values.author,
@@ -216,7 +215,7 @@ const DishDetail = (props) => {
             <RenderDish dish={props.dish} />
             <RenderComments
               comments={props.comments}
-              addComment={props.addComment}
+              postComment={props.postComment}
               dishId={props.dish.id}
             />
           </div>
